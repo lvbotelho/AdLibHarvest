@@ -53,3 +53,64 @@ Licença MIT. Consulte o arquivo `LICENSE` para detalhes.
 ## Como citar
 Para utilizar esta ferramenta em trabalhos acadêmicos, por favor, cite nosso artigo metodológico de origem:
 [preencher com a referência do artigo, assim que publicado]
+
+
+
+
+
+
+[README_EN.md](https://github.com/user-attachments/files/31711010/README_EN.md)
+# Automated Ad Scraper — Meta Ad Library
+
+A Python-based tool for automated collection of metadata and media from sponsored ads on the Meta Ad Library (Facebook/Instagram), designed with a focus on scientific reproducibility.
+
+## What the tool does
+Provide the URL of a Meta Ad Library search, and the robot does the rest: it opens the page, scrolls to the end to ensure all ads are loaded, and extracts all visible data.
+
+**The final output delivered by the robot will be:**
+1. An **Excel spreadsheet (.xlsx)** containing 14 detailed variables for all ads.
+2. A **local folder** containing screenshots and/or original videos of each ad, saved with the official ID to facilitate indexing in your research.
+
+## Extracted Variables (Excel)
+| Variable | Description |
+|---|---|
+| Brand | Name of the advertising brand/page |
+| Library ID | Unique identifier of the ad on the platform |
+| Permanent Link | Direct URL to view the ad |
+| Status | Whether the ad is Active or Inactive |
+| Launch Date | Date the ad started running |
+| Media Type | Primary format detected (Image or Video) |
+| Platform Placements | 6 columns indicating presence on Facebook, Instagram, Messenger, Audience Network, Threads, and WhatsApp |
+| Multiple Use (A/B) | Indicates A/B testing: if the exact same ad is repeated in the interface ("X ads use this creative") |
+| Creative Count | Exact number of identical ads running under the same ID (A/B Test) |
+| Is Dynamic | Indicates the presence of Dynamic Creative Optimization (DCO / "Multiple versions") using AI |
+| Caption Text | The main copy described in the ad, cleaned of buttons and HTML |
+| CTA Text | The text on the click button (e.g., "Learn more") |
+
+## How to Install
+**Step 1: Install Python**
+- Visit python.org/downloads and download Python.
+- **VERY IMPORTANT:** On Windows, check the **"Add Python to PATH"** box during installation.
+
+**Step 2: Download this tool**
+- Download the repository files and put them in a folder.
+
+**Step 3: Install dependencies**
+- In your Terminal/Command Prompt type: `pip install -r requirements.txt`
+- Then type: `playwright install`
+
+## How to Use
+1. Open the Terminal in the folder.
+2. Type: `python script.py`
+3. Paste the search URL when prompted.
+4. Wait without interacting with the screen. The system will generate subfolders with captures and the structured spreadsheet at the end.
+
+## Important Methodological Limitations
+- **Dynamic Grouping (DCO):** If the platform reports "~110 ads" on the general counter, but the robot extracts only "78", this is not an error. Meta groups sub-variations of the same campaign under a root matrix in the visual interface. The robot strictly collects the independent physical matrices (DOM), deduplicating the backend inflations.
+
+## License
+MIT License. See the `LICENSE` file for details.
+
+## How to Cite
+To use this tool in academic work, please cite our original methodological paper:
+[fill in with the article reference, once published]
