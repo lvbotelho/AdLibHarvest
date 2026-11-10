@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Resultados de coleta (pastas por marca com vídeos, imagens, prints e planilhas)
+*/
+*.xlsx
+*.csv
+*.mp4
+*.webm
+*.jpg
+*.png
+*.webp
