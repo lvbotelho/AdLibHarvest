@@ -4,6 +4,7 @@ __pycache__/
 
 # Resultados de coleta (pastas por marca com vídeos, imagens, prints e planilhas)
 */
+!tests/
 *.xlsx
 *.csv
 *.mp4
