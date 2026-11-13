@@ -56,6 +56,9 @@ Opções avançadas:
 - `--headless` — roda sem abrir a janela do navegador.
 - `--debug` — salva as respostas brutas da Meta em `<marca>/_debug`, para diagnóstico.
 
+## Testes
+O repositório inclui testes automatizados das funções que não dependem do navegador (limpeza da legenda, leitura dos dados da Meta, eliminação de mídias duplicadas e nome da pasta). Para rodá-los, na pasta do repositório: `python tests/test_funcoes.py`
+
 ## Limitações
 - **Agrupamento de anúncios:** o contador geral da Biblioteca pode mostrar mais anúncios do que a ferramenta coleta. A Meta agrupa variações de uma mesma campanha sob um único anúncio na interface; a ferramenta coleta os anúncios exibidos na página, e as variações de cada um são salvas como mídias dentro da pasta do anúncio.
 - **Dependência da interface da Meta:** a coleta depende da estrutura atual da Biblioteca de Anúncios. Mudanças feitas pela Meta podem exigir ajustes no script.
@@ -135,6 +138,9 @@ Advanced options:
 - `python script.py --url "<url>"` — passes the URL directly, without the prompt.
 - `--headless` — runs without opening the browser window.
 - `--debug` — saves Meta's raw responses to `<brand>/_debug`, for troubleshooting.
+
+## Tests
+The repository includes automated tests for the functions that do not depend on the browser (caption cleaning, parsing of Meta's data, removal of duplicate media and folder naming). To run them, from the repository folder: `python tests/test_funcoes.py`
 
 ## Limitations
 - **Ad grouping:** the Library's overall counter may show more ads than the tool collects. Meta groups variations of the same campaign under a single ad in the interface; the tool collects the ads shown on the page, and each ad's variations are saved as media inside that ad's folder.
